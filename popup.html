@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #1a1a1b;
+      color: #d7dadc;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .header img {
+      width: 28px;
+      height: 28px;
+    }
+    .header h1 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #818384;
+      margin-bottom: 12px;
+    }
+    .status {
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: #272729;
+      color: #d7dadc;
+      text-align: center;
+    }
+    .status.active {
+      background: #1b3a1b;
+      color: #4fbf4f;
+    }
+    .status.inactive {
+      background: #3a2020;
+      color: #d7dadc;
+    }
+    a {
+      color: #ff4500;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="../icons/icon-48.svg" alt="" />
+    <h1>Reddit Sort by Old</h1>
+  </div>
+  <p>
+    Navigate to any subreddit and look for the
+    <strong style="color:#ff4500;">⏳ Sort: Oldest</strong> button
+    near the sort options.
+  </p>
+  <p>
+    The extension fetches up to ~1000 recent posts via Reddit's public API
+    and displays them oldest-first.
+  </p>
+  <div id="status" class="status">Checking…</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
