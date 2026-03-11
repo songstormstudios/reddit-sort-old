@@ -1,0 +1,397 @@
+/* ==========================================================================
+   Reddit Sort by Old — Content Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------
+   Sort button (new Reddit)
+   -------------------------------------------------------------------- */
+
+.rso-sort-old-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 8px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 9999px;
+  background: #ff4500;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.rso-sort-old-btn:hover {
+  background: #e03d00;
+}
+
+/* Old Reddit tab styling — match native look */
+.rso-sort-old-tab .choice {
+  text-transform: capitalize;
+}
+.rso-sort-old-tab.selected .choice {
+  font-weight: bold;
+  color: #ff4500;
+}
+
+/* --------------------------------------------------------------------
+   Loading overlay
+   -------------------------------------------------------------------- */
+
+.rso-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.rso-overlay-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 48px;
+  border-radius: 12px;
+  background: #1a1a1b;
+  color: #d7dadc;
+  font-size: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.rso-spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #ff4500;
+  border-radius: 50%;
+  animation: rso-spin 0.8s linear infinite;
+}
+
+@keyframes rso-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------------------------------------------
+   Results panel
+   -------------------------------------------------------------------- */
+
+.rso-results {
+  max-width: 800px;
+  margin: 16px auto;
+  padding: 0 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.rso-results-header {
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: #1a1a1b;
+  color: #d7dadc;
+}
+
+.rso-results-header h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #ff4500;
+}
+
+.rso-results-header p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #818384;
+}
+
+.rso-restore-btn {
+  padding: 4px 12px;
+  border: 1px solid #343536;
+  border-radius: 9999px;
+  background: transparent;
+  color: #d7dadc;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rso-restore-btn:hover {
+  background: #343536;
+}
+
+/* Post list */
+.rso-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Single post card */
+.rso-post {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: #1a1a1b;
+  transition: background 0.1s;
+}
+
+.rso-post:hover {
+  background: #252526;
+}
+
+/* Score */
+.rso-post-score {
+  flex-shrink: 0;
+  width: 48px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.rso-score {
+  font-size: 13px;
+  font-weight: 700;
+  color: #d7dadc;
+}
+
+/* Thumbnail */
+.rso-thumb {
+  flex-shrink: 0;
+  width: 70px;
+  height: 52px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: #343536;
+}
+
+.rso-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Post body */
+.rso-post-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.rso-post-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #d7dadc;
+  text-decoration: none;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.rso-post-title:visited {
+  color: #888;
+}
+
+.rso-post-title:hover {
+  text-decoration: underline;
+}
+
+.rso-flair {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #343536;
+  color: #d7dadc;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.rso-nsfw {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #ff585b;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.rso-post-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #818384;
+}
+
+.rso-post-meta a {
+  color: #818384;
+  text-decoration: none;
+}
+
+.rso-post-meta a:hover {
+  text-decoration: underline;
+  color: #d7dadc;
+}
+
+.rso-domain {
+  font-size: 11px;
+}
+
+/* --------------------------------------------------------------------
+   Old Reddit / light-theme overrides
+   Old Reddit is always light by default; also apply via prefers-color-scheme
+   for new Reddit users with light OS theme.
+   -------------------------------------------------------------------- */
+
+.rso-old-reddit .rso-overlay-box,
+.rso-old-reddit.rso-results .rso-results-header,
+.rso-old-reddit .rso-post {
+  /* let the old-reddit rules below handle it */
+}
+
+/* Old Reddit (explicit class) */
+.rso-old-reddit {
+  max-width: none;
+  padding: 0;
+}
+
+.rso-old-reddit .rso-results-header {
+  background: #fff;
+  color: #1c1c1c;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.rso-old-reddit .rso-results-header h2 {
+  color: #ff4500;
+}
+
+.rso-old-reddit .rso-results-header p {
+  color: #7c7c7c;
+}
+
+.rso-old-reddit .rso-restore-btn {
+  border-color: #e5e5e5;
+  color: #1c1c1c;
+}
+
+.rso-old-reddit .rso-restore-btn:hover {
+  background: #f6f7f8;
+}
+
+.rso-old-reddit .rso-post {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.rso-old-reddit .rso-post:hover {
+  background: #f8f9fa;
+}
+
+.rso-old-reddit .rso-score {
+  color: #1c1c1c;
+}
+
+.rso-old-reddit .rso-thumb {
+  background: #f0f0f0;
+}
+
+.rso-old-reddit .rso-post-title {
+  color: #0000ff;
+}
+
+.rso-old-reddit .rso-post-title:visited {
+  color: #551a8b;
+}
+
+.rso-old-reddit .rso-flair {
+  background: #edeff1;
+  color: #1c1c1c;
+}
+
+.rso-old-reddit .rso-post-meta {
+  color: #888;
+}
+
+.rso-old-reddit .rso-post-meta a {
+  color: #888;
+}
+
+.rso-old-reddit .rso-post-meta a:hover {
+  color: #333;
+}
+
+/* prefers-color-scheme light fallback for new Reddit */
+@media (prefers-color-scheme: light) {
+  .rso-results:not(.rso-old-reddit) .rso-overlay-box {
+    background: #fff;
+    color: #1c1c1c;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-results-header {
+    background: #fff;
+    color: #1c1c1c;
+    border: 1px solid #edeff1;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-results-header p {
+    color: #7c7c7c;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-restore-btn {
+    border-color: #edeff1;
+    color: #1c1c1c;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-restore-btn:hover {
+    background: #f6f7f8;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-post {
+    background: #fff;
+    border: 1px solid #edeff1;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-post:hover {
+    background: #f8f9fa;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-score {
+    color: #1c1c1c;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-thumb {
+    background: #edeff1;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-post-title {
+    color: #222;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-post-title:visited {
+    color: #888;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-flair {
+    background: #edeff1;
+    color: #1c1c1c;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-post-meta {
+    color: #7c7c7c;
+  }
+
+  .rso-results:not(.rso-old-reddit) .rso-post-meta a {
+    color: #7c7c7c;
+  }
+}

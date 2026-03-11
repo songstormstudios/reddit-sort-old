@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Reddit Sort by Old",
+  "version": "1.0.0",
+  "description": "Adds a 'Sort by Oldest' option to Reddit subreddit pages, letting you browse posts from oldest to newest.",
+  "icons": {
+    "48": "icons/icon-48.svg",
+    "96": "icons/icon-96.svg"
+  },
+  "permissions": [
+    "activeTab",
+    "*://api.pullpush.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.reddit.com/*",
+        "*://old.reddit.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon-48.svg",
+    "default_popup": "popup/popup.html",
+    "default_title": "Reddit Sort by Old"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "reddit-sort-old@extension",
+      "strict_min_version": "109.0"
+    }
+  }
+}
