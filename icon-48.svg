@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="22" fill="#FF4500"/>
+  <g fill="#fff">
+    <!-- Clock body -->
+    <circle cx="24" cy="22" r="12" fill="none" stroke="#fff" stroke-width="2.5"/>
+    <!-- Clock hands — pointing to ~7:00 for "old time" feel -->
+    <line x1="24" y1="22" x2="24" y2="14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="24" y1="22" x2="18" y2="26" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Center dot -->
+    <circle cx="24" cy="22" r="1.5" fill="#fff"/>
+    <!-- Up arrow at bottom (sort direction) -->
+    <polygon points="24,38 20,42 28,42" fill="#fff"/>
+  </g>
+</svg>
