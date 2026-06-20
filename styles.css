@@ -1,11 +1,3 @@
-/* ==========================================================================
-   Reddit Sort by Old — Content Styles
-   ========================================================================== */
-
-/* --------------------------------------------------------------------
-   Sort button (new Reddit)
-   -------------------------------------------------------------------- */
-
 .rso-sort-old-btn {
   display: inline-flex;
   align-items: center;
@@ -27,7 +19,6 @@
   background: #e03d00;
 }
 
-/* Old Reddit tab styling — match native look */
 .rso-sort-old-tab .choice {
   text-transform: capitalize;
 }
@@ -35,10 +26,6 @@
   font-weight: bold;
   color: #ff4500;
 }
-
-/* --------------------------------------------------------------------
-   Loading overlay
-   -------------------------------------------------------------------- */
 
 .rso-overlay {
   position: fixed;
@@ -78,10 +65,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* --------------------------------------------------------------------
-   Results panel
-   -------------------------------------------------------------------- */
 
 .rso-results {
   max-width: 800px;
@@ -125,14 +108,16 @@
   background: #343536;
 }
 
-/* Post list */
 .rso-post-list {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-/* Single post card */
+.rso-load-sentinel {
+  height: 1px;
+}
+
 .rso-post {
   display: flex;
   align-items: flex-start;
@@ -147,7 +132,6 @@
   background: #252526;
 }
 
-/* Score */
 .rso-post-score {
   flex-shrink: 0;
   width: 48px;
@@ -161,7 +145,6 @@
   color: #d7dadc;
 }
 
-/* Thumbnail */
 .rso-thumb {
   flex-shrink: 0;
   width: 70px;
@@ -177,7 +160,6 @@
   justify-content: center;
 }
 
-/* Post body */
 .rso-post-body {
   flex: 1;
   min-width: 0;
@@ -246,19 +228,12 @@
   font-size: 11px;
 }
 
-/* --------------------------------------------------------------------
-   Old Reddit / light-theme overrides
-   Old Reddit is always light by default; also apply via prefers-color-scheme
-   for new Reddit users with light OS theme.
-   -------------------------------------------------------------------- */
-
 .rso-old-reddit .rso-overlay-box,
 .rso-old-reddit.rso-results .rso-results-header,
 .rso-old-reddit .rso-post {
-  /* let the old-reddit rules below handle it */
+
 }
 
-/* Old Reddit (explicit class) */
 .rso-old-reddit {
   max-width: none;
   padding: 0;
@@ -331,7 +306,6 @@
   color: #333;
 }
 
-/* prefers-color-scheme light fallback for new Reddit */
 @media (prefers-color-scheme: light) {
   .rso-results:not(.rso-old-reddit) .rso-overlay-box {
     background: #fff;
