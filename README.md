@@ -13,6 +13,6 @@
   </g>
 </svg>
 
-Firefox extension for sorting by old subreddit posts. Only works on old.reddit.com. Supports max post history of 1,000,000.
+Firefox extension for sorting by old subreddit posts. Supports max post history of 1,000,000.
 
 Notice: This extension will not receive further updates.
